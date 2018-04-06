@@ -45,7 +45,7 @@ mpirun -n 20 gpaw-python esp_from_gpw.py smamp.gpw
 # construct cost function with weighting from electron density:
 
 module purge
-module load horton/2.1.0b
+module load horton/2.1.0b3
 horton-esp-cost.py smamp_esp_hartree_ua.cube smamp_esp_cost_wdens_ua.h5 --pbc 000 --wdens rho_ua.cube --overwrite
 horton-esp-fit.py -q 6 smamp_esp_cost_wdens_ua.h5 smamp_esp_charges_wdens_ua.h5 --overwrite
 # horton-esp-fit.py possesses the possibility to impose symmetry constraints via
